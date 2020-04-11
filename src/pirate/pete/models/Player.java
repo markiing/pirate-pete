@@ -1,13 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pirate.pete.models;
 
+import java.util.LinkedList;
 import pirate.pete.exceptions.AgeException;
 
-
+/**
+ * Player Abstraction. Here we storage all player details, including the next player to play. 
+ * @see LinkedList
+ */
 public class Player {
     
     private static final int INITIAL_PIRATE_POINTS = 100;
@@ -23,7 +23,7 @@ public class Player {
     
     //Constructor to receive basics data of player (Name, Surname and Age)
     public Player(String name, String surname, Integer age){
-        if(age < 12) throw new AgeException("You should have 12 years old or over"); //Validation for 12 YO Age
+        if(age < 12) throw new AgeException("You should have 12 years old or over to play"); //Validation for 12 YO Age
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -44,8 +44,6 @@ public class Player {
         return piratePoints;
     }
     
-    
-
     public void setPiratePoints(Integer piratePoints) {
         this.piratePoints = piratePoints;
     }
@@ -76,6 +74,7 @@ public class Player {
     }
 
     
+    //Show player shovel status.
     public void shovelStatus(){
         System.out.println("--------------\t Shovel Status \t--------------");
         System.out.println("Shovel Type: "+ this.shovel.getType());

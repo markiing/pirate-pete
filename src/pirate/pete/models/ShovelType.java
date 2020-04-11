@@ -1,22 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pirate.pete.models;
 
-import java.util.List;
 
 /**
- *
+ * Represents the ShovelTypes
  * @author Marcus
  */
 public enum ShovelType {
     
-    WOOD(3, 0, "Wood"),
-    IRON(4, 0, "Iron"),
-    GOLD(5, 0, "Gold"),
-    DIAMOND(6, 0, "Diamond");
+    //Wood Shovel (Dig capacity = 3, Price = 15, Type = "Wood"
+    WOOD(3, 15, "Wood"),
+    //Iron Shovel (Dig capacity = 4, Price = 20, Type = "Iron"
+    IRON(4, 20, "Iron"),
+    //Gold Shovel (Dig capacity = 5, Price = 25, Type = "Gold"
+    GOLD(5, 25, "Gold"),
+    //Diamond Shovel (Dig capacity = 6, Price = 30, Type = "Diamond"
+    DIAMOND(6, 30, "Diamond");
     
     private final String type;
     private final Integer digCapacity;
@@ -38,7 +36,7 @@ public enum ShovelType {
     }
 
     public Integer getPrice() {
-        return digCapacity * 5;
+        return price;
     }
     
 

@@ -20,7 +20,7 @@ public class Grid {
     private final String[] colLabels = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
     final private Cell[][] cells = new Cell[10][10];
     private int totalTresures = 0;
-    private int treasuresFounded = 0;
+    
     
     public Grid(){
         populateTreasures();
@@ -55,7 +55,7 @@ public class Grid {
                         cells[row][col] = new Cell(row, col, true);
                         totalTresures++; 
                     }catch(Exception ex){
-                        
+                        // Do nothing and continue processing PiratePete.txt
                     }
                 }
             }

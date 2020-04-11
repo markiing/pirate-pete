@@ -6,9 +6,9 @@ package pirate.pete.models;
  */
 public class Cell {
     
-    private Integer col;
-    private Integer row;
-    private Boolean haveTreasure;
+    final private Integer col;
+    final private Integer row;
+    final private Boolean haveTreasure;
     private Boolean dug;
     private String whoDug;
 

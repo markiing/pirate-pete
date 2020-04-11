@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pirate.pete;
 
-/**
- *
- * @author Marcus
- */
 public class Menu {
     
-     //Show Menu
+    //Show Menu
     public static void show(){
         System.out.print("\033[H\033[2J");  //CLEAR OUT CONSOLE
         System.out.flush();
